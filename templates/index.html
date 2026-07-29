@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Submit an Inquiry</h1>
+
+<form method="POST">
+
+    <label>Name</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email"><br><br>
+
+    <label>Subject</label><br>
+    <input type="text" name="subject"><br><br>
+
+    <label>Message</label><br>
+    <textarea name="message" rows="5" cols="40"></textarea><br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock %}
