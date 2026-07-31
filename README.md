@@ -78,7 +78,10 @@ This is something students almost never include, but it shows maturity.
 - No database integration yet.
 - No authentication system.
 ```
-## Future Improvements
+## Progress Shots
+
+<img width="1134" height="744" alt="image" src="https://github.com/user-attachments/assets/2cfbfe6e-c9b8-4a73-b7a3-b0643a44f7ce" />
+
 
 - Integrate SQLite or PostgreSQL
 - Add user authentication
