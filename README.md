@@ -80,7 +80,11 @@ This is something students almost never include, but it shows maturity.
 ```
 ## Progress Shots
 
-<img width="1134" height="744" alt="image" src="https://github.com/user-attachments/assets/2cfbfe6e-c9b8-4a73-b7a3-b0643a44f7ce" />
+1. Standard template i built
+   <img width="1134" height="744" alt="image" src="https://github.com/user-attachments/assets/2cfbfe6e-c9b8-4a73-b7a3-b0643a44f7ce" />
+
+3. The updated site with user inout under SQLLite
+   <img width="1786" height="844" alt="Screenshot 2026-08-01 185826" src="https://github.com/user-attachments/assets/0f35b6ed-756e-43cf-a79e-4e39764f3414" />
 
 
 - Integrate SQLite or PostgreSQL
