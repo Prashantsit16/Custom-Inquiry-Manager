@@ -2,36 +2,69 @@
 
 {% block content %}
 
-<h1>Inquiry Dashboard</h1>
+<div class="card">
 
-<table border="1" cellpadding="10">
+    <h1>Inquiry Dashboard</h1>
 
-<tr>
+    <p style="color:#6b7280; margin-bottom:20px;">
+        View and manage all submitted inquiries.
+    </p>
 
-<th>Name</th>
-<th>Email</th>
-<th>Subject</th>
+    {% if inquiries %}
 
-</tr>
+    <table>
 
-{% for inquiry in inquiries %}
+        <thead>
 
-<tr>
+        <tr>
 
-<td>
-    <a href="/inquiry/{{ loop.index0 }}">
-        {{ inquiry.name }}
-    </a>
-</td>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Action</th>
 
-<td>{{ inquiry.email }}</td>
+        </tr>
 
-<td>{{ inquiry.subject }}</td>
+        </thead>
 
-</tr>
+        <tbody>
 
-{% endfor %}
+        {% for inquiry in inquiries %}
 
-</table>
+        <tr>
+
+            <td>{{ inquiry.name }}</td>
+
+            <td>{{ inquiry.email }}</td>
+
+            <td>{{ inquiry.subject }}</td>
+
+            <td>
+
+                <a class="btn-link" href="/inquiry/{{ loop.index0 }}">
+    View Details
+</a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+        <h3>No inquiries submitted yet.</h3>
+
+        <p>
+            Once users submit inquiries, they will appear here.
+        </p>
+
+    {% endif %}
+
+</div>
 
 {% endblock %}

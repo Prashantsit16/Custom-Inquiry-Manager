@@ -2,14 +2,44 @@
 
 {% block content %}
 
-<h1>Inquiry Details</h1>
+<div class="card">
 
-<p><strong>Name:</strong> {{ inquiry.name }}</p>
+    <h1>Inquiry Details</h1>
 
-<p><strong>Email:</strong> {{ inquiry.email }}</p>
+    <br>
 
-<p><strong>Subject:</strong> {{ inquiry.subject }}</p>
+    <p>
+        <strong>Name:</strong><br>
+        {{ inquiry.name }}
+    </p>
 
-<p><strong>Message:</strong> {{ inquiry.message }}</p>
+    <br>
+
+    <p>
+        <strong>Email:</strong><br>
+        {{ inquiry.email }}
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Subject:</strong><br>
+        {{ inquiry.subject }}
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Message:</strong><br>
+        {{ inquiry.message }}
+    </p>
+
+    <br><br>
+
+    <a class="btn-link" href="/dashboard">
+        ← Back to Dashboard
+    </a>
+
+</div>
 
 {% endblock %}

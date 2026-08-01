@@ -1,23 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
 
-    font-family: Arial, sans-serif;
+    font-family:Segoe UI, Arial, sans-serif;
 
-    background-color:#f4f4f4;
+    background:linear-gradient(135deg,#eef2ff,#dbeafe);
 
-    text-align:center;
+    min-height:100vh;
 
-    margin:40px;
+    color:#1f2937;
 
 }
 
-header{
+.navbar{
 
-    color:darkblue;
+    background:#1e3a8a;
+
+    color:white;
+
+    padding:20px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.logo{
+
+    text-align:center;
+
+}
+
+main{
+
+    margin-top:40px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    margin-bottom:18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+th{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+th,
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:left;
+
+}
+
+tr:hover{
+
+    background:#f3f4f6;
+
+}
+
+a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
 
 }
 
 footer{
 
-    color:gray;
+    margin-top:50px;
+
+    text-align:center;
+
+    color:#6b7280;
+
+    padding:20px;
+
+}
+
+.btn-link{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn-link:hover{
+
+    background:#1d4ed8;
+
+    text-decoration:none;
+
+}
+
+h1{
+
+    margin-bottom:20px;
+
+}
+
+label{
+
+    font-weight:600;
+
+}
+
+p{
+
+    line-height:1.6;
+
+}
+
+strong{
+
+    color:#1e3a8a;
 
 }

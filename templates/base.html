@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Custom Inquiry Manager</title>
 
-<link rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}">
-
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-    <header>
+<header class="navbar">
 
-        <h2>Custom Inquiry Manager</h2>
+    <div class="container">
 
-        <hr>
+        <h2 class="logo">Custom Inquiry Manager</h2>
 
-    </header>
+    </div>
 
-    {% block content %}
+</header>
 
-    {% endblock %}
+<main class="container">
 
-    <hr>
+{% block content %}
+{% endblock %}
 
-    <footer>
+</main>
 
-        <p>© 2026 Custom Inquiry Manager</p>
+<footer>
 
-    </footer>
+    <p>© 2026 Custom Inquiry Manager | Built with Flask on AWS EC2</p>
+
+</footer>
 
 </body>
 
