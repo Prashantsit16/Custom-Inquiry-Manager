@@ -14,46 +14,51 @@
 
     <table>
 
-        <thead>
-
+    <thead>
         <tr>
-
             <th>Name</th>
-            <th>Email</th>
             <th>Subject</th>
-            <th>Action</th>
-
+            <th>Status</th>
+            <th>Submitted</th>
+            <th>View</th>
         </tr>
+    </thead>
 
-        </thead>
+    <tbody>
 
-        <tbody>
-
-        {% for inquiry in inquiries %}
+    {% for inquiry in inquiries %}
 
         <tr>
 
             <td>{{ inquiry.name }}</td>
 
-            <td>{{ inquiry.email }}</td>
-
             <td>{{ inquiry.subject }}</td>
 
             <td>
 
-                <a class="btn-link" href="/inquiry/{{ loop.index0 }}">
-    View Details
+<span class="status pending">
+
+{{ inquiry.status }}
+
+</span>
+
+</td>
+
+            <td>{{ inquiry.created_at.strftime("%d %b %Y") }}</td>
+
+            <td>
+                <a class="view-btn" href="/inquiry/{{ inquiry.id }}">
+    View
 </a>
 
             </td>
-
         </tr>
 
-        {% endfor %}
+    {% endfor %}
 
-        </tbody>
+    </tbody>
 
-    </table>
+</table>
 
     {% else %}
 

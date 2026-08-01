@@ -6,35 +6,50 @@
 
     <h1>Inquiry Details</h1>
 
-    <br>
-
-    <p>
-        <strong>Name:</strong><br>
-        {{ inquiry.name }}
+    <p style="color:#6b7280;">
+        Review complete information for this inquiry.
     </p>
 
+    <hr>
+
+    <div class="detail-item">
+        <strong>Name</strong>
+        <p>{{ inquiry.name }}</p>
+    </div>
+
+    <div class="detail-item">
+        <strong>Email</strong>
+        <p>{{ inquiry.email }}</p>
+    </div>
+
+    <div class="detail-item">
+        <strong>Subject</strong>
+        <p>{{ inquiry.subject }}</p>
+    </div>
+
+    <div class="detail-item">
+        <strong>Status</strong>
+        <p>
+            <span class="status pending">
+                {{ inquiry.status }}
+            </span>
+        </p>
+    </div>
+
+    <div class="detail-item">
+        <strong>Submitted On</strong>
+        <p>{{ inquiry.created_at.strftime("%d %b %Y %I:%M %p") }}</p>
+    </div>
+
+    <div class="detail-item">
+        <strong>Message</strong>
+
+        <div class="message-box">
+            {{ inquiry.message }}
+        </div>
+    </div>
+
     <br>
-
-    <p>
-        <strong>Email:</strong><br>
-        {{ inquiry.email }}
-    </p>
-
-    <br>
-
-    <p>
-        <strong>Subject:</strong><br>
-        {{ inquiry.subject }}
-    </p>
-
-    <br>
-
-    <p>
-        <strong>Message:</strong><br>
-        {{ inquiry.message }}
-    </p>
-
-    <br><br>
 
     <a class="btn-link" href="/dashboard">
         ← Back to Dashboard

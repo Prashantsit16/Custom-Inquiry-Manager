@@ -225,3 +225,109 @@ strong{
     color:#1e3a8a;
 
 }
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+}
+
+.navbar nav{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.navbar a:hover{
+
+    text-decoration:underline;
+
+}
+.status{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+.pending{
+
+    background:#FFF3CD;
+
+    color:#856404;
+
+}
+.detail-item{
+
+    margin-bottom:25px;
+
+}
+
+.detail-item strong{
+
+    display:block;
+
+    color:#1E3A8A;
+
+    margin-bottom:8px;
+
+}
+
+.message-box{
+
+    background:#f8fafc;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    white-space:pre-wrap;
+
+    line-height:1.6;
+
+}
+.view-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+.view-btn:hover{
+
+    background:#1d4ed8;
+
+}
