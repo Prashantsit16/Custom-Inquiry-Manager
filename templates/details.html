@@ -6,50 +6,116 @@
 
     <h1>Inquiry Details</h1>
 
-    <p style="color:#6b7280;">
+    <p style="color:#6b7280; margin-bottom:25px;">
         Review complete information for this inquiry.
     </p>
 
     <hr>
 
-    <div class="detail-item">
-        <strong>Name</strong>
-        <p>{{ inquiry.name }}</p>
+    <br>
+
+    <strong>Name</strong>
+
+    <p>{{ inquiry.name }}</p>
+
+    <br>
+
+    <strong>Email</strong>
+
+    <p>{{ inquiry.email }}</p>
+
+    <br>
+
+    <strong>Subject</strong>
+
+    <p>{{ inquiry.subject }}</p>
+
+    <br>
+
+    <strong>Status</strong>
+
+    <form action="/update_status/{{ inquiry.id }}" method="POST">
+
+        <select name="status">
+
+            <option value="Pending"
+            {% if inquiry.status == "Pending" %}selected{% endif %}>
+                Pending
+            </option>
+
+            <option value="In Progress"
+            {% if inquiry.status == "In Progress" %}selected{% endif %}>
+                In Progress
+            </option>
+
+            <option value="Resolved"
+            {% if inquiry.status == "Resolved" %}selected{% endif %}>
+                Resolved
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button class="btn-link">
+            Update Status
+        </button>
+
+    </form>
+
+    <br>
+
+    <strong>Submitted On</strong>
+
+    <p>{{ inquiry.created_at.strftime("%d %b %Y %I:%M %p") }}</p>
+
+    <br>
+
+    <strong>Message</strong>
+
+    <div class="message-box">
+        {{ inquiry.message }}
     </div>
 
-    <div class="detail-item">
-        <strong>Email</strong>
-        <p>{{ inquiry.email }}</p>
-    </div>
+    <br><br>
 
-    <div class="detail-item">
-        <strong>Subject</strong>
-        <p>{{ inquiry.subject }}</p>
-    </div>
+    <h2>AI Analysis</h2>
 
-    <div class="detail-item">
-        <strong>Status</strong>
-        <p>
-            <span class="status pending">
-                {{ inquiry.status }}
-            </span>
-        </p>
-    </div>
+    <hr>
 
-    <div class="detail-item">
-        <strong>Submitted On</strong>
-        <p>{{ inquiry.created_at.strftime("%d %b %Y %I:%M %p") }}</p>
-    </div>
+    <br>
 
-    <div class="detail-item">
-        <strong>Message</strong>
+    <strong>Summary</strong>
 
-        <div class="message-box">
-            {{ inquiry.message }}
-        </div>
+    <div class="summary-box">
+        {{ inquiry.summary }}
     </div>
 
     <br>
+
+    <strong>Category</strong>
+
+    <div class="summary-box">
+        {{ inquiry.category }}
+    </div>
+
+    <br>
+
+    <strong>Priority</strong>
+
+    <div class="summary-box">
+        {{ inquiry.priority }}
+    </div>
+
+    <br>
+
+    <strong>Department</strong>
+
+    <div class="summary-box">
+        {{ inquiry.department }}
+    </div>
+
+    <br><br>
 
     <a class="btn-link" href="/dashboard">
         ← Back to Dashboard

@@ -5,6 +5,29 @@
 <div class="card">
 
     <h1>Inquiry Dashboard</h1>
+    <div class="stats-container">
+
+    <div class="stat-card">
+        <h3>{{ total }}</h3>
+        <p>Total Tickets</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>{{ pending }}</h3>
+        <p>Pending</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>{{ resolved }}</h3>
+        <p>Resolved</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>{{ high }}</h3>
+        <p>High Priority</p>
+    </div>
+
+</div>
 
     <p style="color:#6b7280; margin-bottom:20px;">
         View and manage all submitted inquiries.
@@ -16,12 +39,14 @@
 
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Subject</th>
-            <th>Status</th>
-            <th>Submitted</th>
-            <th>View</th>
-        </tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Priority</th>
+    <th>Category</th>
+    <th>Status</th>
+    <th>Submitted</th>
+    <th>View</th>
+</tr>
     </thead>
 
     <tbody>
@@ -30,29 +55,45 @@
 
         <tr>
 
-            <td>{{ inquiry.name }}</td>
+    <td>{{ inquiry.name }}</td>
 
-            <td>{{ inquiry.subject }}</td>
+    <td>{{ inquiry.subject }}</td>
 
-            <td>
+    <td>
+        {% if inquiry.priority == "High" %}
+            <span class="priority high">High</span>
 
-<span class="status pending">
+        {% elif inquiry.priority == "Medium" %}
+            <span class="priority medium">Medium</span>
 
-{{ inquiry.status }}
+        {% else %}
+            <span class="priority low">Low</span>
+        {% endif %}
+    </td>
 
-</span>
+    <td>{{ inquiry.category }}</td>
 
-</td>
+    <td>
+        {% if inquiry.status == "Pending" %}
+    <span class="status pending">{{ inquiry.status }}</span>
 
-            <td>{{ inquiry.created_at.strftime("%d %b %Y") }}</td>
+{% elif inquiry.status == "In Progress" %}
+    <span class="status progress">{{ inquiry.status }}</span>
 
-            <td>
-                <a class="view-btn" href="/inquiry/{{ inquiry.id }}">
-    View
-</a>
+{% else %}
+    <span class="status resolved">{{ inquiry.status }}</span>
+{% endif %}
+    </td>
 
-            </td>
-        </tr>
+    <td>{{ inquiry.created_at.strftime("%d %b %Y") }}</td>
+
+    <td>
+        <a class="view-btn" href="/inquiry/{{ inquiry.id }}">
+            View
+        </a>
+    </td>
+
+</tr>
 
     {% endfor %}
 
