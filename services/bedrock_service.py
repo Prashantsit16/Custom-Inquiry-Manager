@@ -15,7 +15,16 @@ You are an AI customer support assistant.
 
 Analyze the following customer inquiry.
 
-Return ONLY valid JSON.
+Return ONLY one JSON object.
+
+Do not include:
+- explanations
+- markdown
+- code fences
+- comments
+- extra text
+
+Your entire response must be a single JSON object.
 
 Format:
 
@@ -54,12 +63,25 @@ Customer Inquiry:
     )
 
     response_body = json.loads(response["body"].read())
+
     ai_response = response_body["output"]["message"]["content"][0]["text"].strip()
 
-    # Remove markdown if present
+# Remove markdown
     if ai_response.startswith("```"):
         ai_response = ai_response.replace("```json", "")
         ai_response = ai_response.replace("```", "")
         ai_response = ai_response.strip()
 
-    return json.loads(ai_response)
+    print("AI RESPONSE:")
+    print(ai_response)
+
+# Keep only the first JSON object
+    start = ai_response.find("{")
+    end = ai_response.rfind("}") + 1
+
+    json_text = ai_response[start:end]
+
+    print("JSON ONLY:")
+    print(json_text)
+
+    return json.loads(json_text)
