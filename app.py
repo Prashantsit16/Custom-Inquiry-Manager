@@ -1,9 +1,12 @@
 from unicodedata import category
-
 from flask import Flask, render_template, request, redirect, url_for
 from extensions import db
 from models.inquiry import Inquiry
 from services.bedrock_service import summarize_inquiry
+from services.email_service import (
+    send_admin_notification,
+    send_confirmation_email,
+)
 
 app = Flask(__name__)
 app.config.from_object("config.Config")
@@ -13,6 +16,8 @@ db.init_app(app)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
+
+    print("HOME ROUTE CALLED")
 
     if request.method == "POST":
 
@@ -38,9 +43,25 @@ def home():
         db.session.add(new_inquiry)
         db.session.commit()
 
+        print("Starting email sending...")
+
+        try:
+            print("Calling admin notification...")
+            send_admin_notification(new_inquiry)
+            print("Admin notification sent.")
+
+            print("Calling confirmation email...")
+            send_confirmation_email(new_inquiry)
+            print("Confirmation email sent.")
+
+        except Exception:
+            import traceback
+            traceback.print_exc()
+
         return redirect("/dashboard")
 
     return render_template("index.html")
+            
 
 @app.route("/dashboard")
 def dashboard():
