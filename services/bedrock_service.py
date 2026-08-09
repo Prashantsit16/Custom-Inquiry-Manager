@@ -1,5 +1,8 @@
 import boto3
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 client = boto3.client(
@@ -72,9 +75,8 @@ Customer Inquiry:
         ai_response = ai_response.replace("```", "")
         ai_response = ai_response.strip()
 
-    print("AI RESPONSE:")
-    print(ai_response)
-
+    logger.info("AI response received from Bedrock")
+    logger.info(ai_response)
 # Keep only the first JSON object
     start = ai_response.find("{")
     end = ai_response.rfind("}") + 1

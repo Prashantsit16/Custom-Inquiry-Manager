@@ -1,4 +1,3 @@
-from unicodedata import category
 from flask import Flask, render_template, request, redirect, url_for
 from extensions import db
 from models.inquiry import Inquiry
@@ -7,6 +6,14 @@ from services.email_service import (
     send_admin_notification,
     send_confirmation_email,
 )
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 app.config.from_object("config.Config")
@@ -17,7 +24,7 @@ db.init_app(app)
 @app.route("/", methods=["GET", "POST"])
 def home():
 
-    print("HOME ROUTE CALLED")
+    logger.info("Home route called")
 
     if request.method == "POST":
 
@@ -43,22 +50,21 @@ def home():
         db.session.add(new_inquiry)
         db.session.commit()
 
-        print("Starting email sending...")
+        logger.info("Starting email sending...")
 
         try:
-            print("Calling admin notification...")
+            logger.info("Calling admin notification...")
             send_admin_notification(new_inquiry)
-            print("Admin notification sent.")
+            logger.info("Admin notification sent.")
 
-            print("Calling confirmation email...")
+            logger.info("Calling confirmation email...")
             send_confirmation_email(new_inquiry)
-            print("Confirmation email sent.")
+            logger.info("Confirmation email sent.")
 
         except Exception:
-            import traceback
-            traceback.print_exc()
+            logger.exception("Email sending failed")
 
-        return redirect("/dashboard")
+        return redirect(url_for("dashboard"))
 
     return render_template("index.html")
             
