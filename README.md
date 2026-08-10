@@ -37,7 +37,7 @@ This project demonstrates end-to-end backend development, cloud deployment, AI i
 
 ## 🏗 Architecture
 
-(Architecture diagram here)
+![Architecture](screenshots/architecture.png)
 
 ---
 
