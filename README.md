@@ -56,6 +56,16 @@ This project demonstrates end-to-end backend development, cloud deployment, AI i
 
 ---
 
+## 📈 Project Workflow
+
+1. User submits an inquiry through the web interface.
+2. Flask receives and validates the request.
+3. Amazon Bedrock generates an AI summary, category, and priority.
+4. The inquiry is stored using SQLAlchemy in SQLite.
+5. Amazon SES sends confirmation and admin notification emails.
+6. CloudWatch collects logs for monitoring.
+7. The dashboard displays all submitted inquiries.
+
 ## ☁ AWS Services Used
 
 - Amazon EC2
@@ -134,6 +144,21 @@ Response
 - Gunicorn logs
 - Health endpoint
 
+Health Endpoint:
+
+```
+GET /health
+```
+
+Example Response:
+
+```json
+{
+    "status":"healthy",
+    "application":"Custom Inquiry Manager",
+    "version":"1.0"
+}
+```
 ---
 
 ## ⭐ Key Highlights
