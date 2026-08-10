@@ -13,6 +13,14 @@ An end-to-end customer inquiry management system built with **Flask**, **Amazon 
 ![SES](https://img.shields.io/badge/Amazon-SES-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## 🚀 Overview
+
+AI-Powered Customer Inquiry Manager is a production-ready web application that streamlines customer inquiry management using Generative AI and AWS cloud services.
+
+Users can submit inquiries through a responsive web interface, where Amazon Bedrock automatically analyzes the message, generates an AI summary, assigns a category and priority, and stores the inquiry in a SQLite database. Email notifications are sent using Amazon SES, while Amazon CloudWatch provides centralized logging and monitoring. The application is containerized with Docker and deployed on an AWS EC2 instance using Gunicorn as the production WSGI server.
+
+This project demonstrates end-to-end backend development, cloud deployment, AI integration, monitoring, and production best practices.
+
 ## ✨ Features
 
 - Submit customer inquiries through a modern web interface
