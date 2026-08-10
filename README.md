@@ -1,83 +1,135 @@
-## Overview
+# 🚀 AI-Powered Customer Inquiry Manager
 
-Custom Inquiry Manager is a Flask-based web application that allows users to submit inquiries through a web form and manage them using a dashboard.
-The project demonstrates the fundamentals of Flask development, including routing, Jinja2 templating, form handling, dynamic routes, and server-side data management.
+An end-to-end customer inquiry management system built with **Flask**, **Amazon Bedrock**, **Amazon SES**, **Docker**, **CloudWatch**, and **AWS EC2**.
 
-## Features
-- Submit customer inquiries
-- Dashboard to view all inquiries
-- View individual inquiry details
-- Dynamic URL routing
-- Jinja2 template inheritance
-- Server-side form processing
-- Responsive project structure
+---
 
-## Technologies Used
-- Python
-- Flask
-- HTML5
-- CSS3
-- Jinja2
+## ✨ Features
 
-#Structure so far
-custom-inquiry-manager/
-│
+- Submit customer inquiries through a modern web interface
+- AI-powered categorization using Amazon Bedrock
+- Automatic priority assignment
+- Dashboard for tracking inquiries
+- Email notifications using Amazon SES
+- Dockerized deployment
+- Production-ready with Gunicorn
+- CloudWatch log monitoring
+- Health endpoint for monitoring
+
+---
+
+## 🏗 Architecture
+
+(Architecture diagram here)
+
+---
+
+## ⚙ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Backend | Flask |
+| Database | SQLite + SQLAlchemy |
+| AI | Amazon Bedrock |
+| Email | Amazon SES |
+| Monitoring | Amazon CloudWatch |
+| Deployment | AWS EC2 |
+| Containerization | Docker |
+| Production Server | Gunicorn |
+
+---
+
+## ☁ AWS Services Used
+
+- Amazon EC2
+- Amazon Bedrock
+- Amazon SES
+- Amazon CloudWatch
+- IAM
+
+---
+
+## 📂 Project Structure
+
+```text
+Custom-Inquiry-Manager/
 ├── app.py
+├── config.py
+├── Dockerfile
+├── docker-compose.yml
 ├── requirements.txt
-├── README.md
-├── .gitignore
-│
+├── services/
 ├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── dashboard.html
-│   └── details.html
-│
-└── static/
-    └── css/
-        └── style.css
+├── static/
+└── screenshots/
+```
 
-## Installation
+---
 
-Clone the repository
+## 🚀 Running Locally
 
 ```bash
-git clone <repository-url>
+git clone <repo>
 
-Navigate to the project
+cd Custom-Inquiry-Manager
 
-cd custom-inquiry-manager
-
-Create a virtual environment
-
-python3 -m venv venv
-
-Activate the virtual environment
+python -m venv venv
 
 source venv/bin/activate
 
-Install dependencies
-
 pip install -r requirements.txt
-
-Run the application
 
 python app.py
 ```
 
 ---
 
-# Section 7 — Current Limitations
+## 🐳 Running with Docker
 
-This is something students almost never include, but it shows maturity.
-
-```markdown
-## Current Limitations
-
-- Data is stored in memory and is lost when the server restarts.
-- No database integration yet.
-- No authentication system.
+```bash
+docker compose up --build
 ```
+
+---
+
+## ❤️ Health Check
+
+```
+GET /health
+```
+
+Response
+
+```json
+{
+  "status": "healthy",
+  "application": "Custom Inquiry Manager",
+  "version": "1.0"
+}
+```
+
+---
+
+## 📊 Monitoring
+
+- Amazon CloudWatch Logs
+- Structured application logging
+- Gunicorn logs
+- Health endpoint
+
+---
+
+## 🔮 Future Improvements
+
+- User Authentication
+- PostgreSQL support
+- CI/CD Pipeline using GitHub Actions
+- Kubernetes deployment
+- JWT Authentication
+- Redis caching
+
+---
+
 ## Progress Shots
 
 1. Standard template i built
@@ -85,10 +137,4 @@ This is something students almost never include, but it shows maturity.
 
 3. The updated site with user inout under SQLLite
    <img width="1786" height="844" alt="Screenshot 2026-08-01 185826" src="https://github.com/user-attachments/assets/0f35b6ed-756e-43cf-a79e-4e39764f3414" />
-
-
-- Integrate SQLite or PostgreSQL
-- Add user authentication
-- Add edit and delete functionality
-- Deploy using Docker
-- Deploy on AWS        
+     
