@@ -4,6 +4,15 @@ An end-to-end customer inquiry management system built with **Flask**, **Amazon 
 
 ---
 
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue?logo=docker)
+![CloudWatch](https://img.shields.io/badge/Amazon-CloudWatch-orange)
+![Bedrock](https://img.shields.io/badge/Amazon-Bedrock-purple)
+![SES](https://img.shields.io/badge/Amazon-SES-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 ## ✨ Features
 
 - Submit customer inquiries through a modern web interface
