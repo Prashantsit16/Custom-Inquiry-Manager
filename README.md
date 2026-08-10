@@ -203,6 +203,10 @@ Example Response:
 
 6. Docker Container
    <img width="1451" height="121" alt="docker-running png" src="https://github.com/user-attachments/assets/2fdc9a38-28dd-4909-9e4f-50a077a11346" />
+
+7. Cloudwatch Logs
+   <img width="1803" height="733" alt="cloudwatch-logs png" src="https://github.com/user-attachments/assets/397ccaad-0d30-47aa-a4e1-fc0d46c8c63d" />
+   
    
       
      
