@@ -200,5 +200,9 @@ Example Response:
 
 5. Inquiry Details
    <img width="1894" height="915" alt="inquiry-details png" src="https://github.com/user-attachments/assets/e5676931-613c-4d0e-944b-d6bb62a76483" />
+
+6. Docker Container
+   <img width="1451" height="121" alt="docker-running png" src="https://github.com/user-attachments/assets/2fdc9a38-28dd-4909-9e4f-50a077a11346" />
+   
       
      
