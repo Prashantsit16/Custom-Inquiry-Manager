@@ -136,6 +136,17 @@ Response
 
 ---
 
+## ⭐ Key Highlights
+
+- 🤖 AI-powered inquiry analysis using Amazon Bedrock
+- 📧 Automated email notifications with Amazon SES
+- ☁️ Deployed on AWS EC2
+- 📊 CloudWatch log monitoring
+- 🐳 Docker containerization
+- 🚀 Production deployment with Gunicorn
+- ❤️ Health monitoring endpoint (`/health`)
+- 💾 SQLAlchemy ORM with SQLite
+
 ## 🔮 Future Improvements
 
 - User Authentication
