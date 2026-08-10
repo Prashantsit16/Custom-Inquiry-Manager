@@ -195,6 +195,10 @@ Example Response:
 3. Running on Gunnicorn
    <img width="1201" height="254" alt="image" src="https://github.com/user-attachments/assets/a053cd09-91f5-438e-a7b5-3a1eb396a618" />
 
+4. Inquiry Details
+   <img width="1894" height="915" alt="inquiry-details png" src="https://github.com/user-attachments/assets/e5676931-613c-4d0e-944b-d6bb62a76483" />
+   
+
 4. Dashboard
    <img width="1886" height="906" alt="dashboard png" src="https://github.com/user-attachments/assets/8708e44b-2663-4ab9-ac00-2d90d9d45026" />
 
