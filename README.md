@@ -206,6 +206,10 @@ Example Response:
 
 7. Cloudwatch Logs
    <img width="1803" height="733" alt="cloudwatch-logs png" src="https://github.com/user-attachments/assets/397ccaad-0d30-47aa-a4e1-fc0d46c8c63d" />
+
+8. SES notification to my mail:
+   <img width="1057" height="677" alt="image" src="https://github.com/user-attachments/assets/41079068-b0c2-4f65-af6d-aee18a373c82" />
+   
    
    
       
