@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  inquiry-manager:
+    build: .
+    container_name: custom-inquiry-manager
+    ports:
+      - "8000:8000"
+    volumes:
+      - ~/.aws:/root/.aws:ro
+    restart: unless-stopped

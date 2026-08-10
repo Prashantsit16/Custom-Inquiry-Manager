@@ -119,5 +119,14 @@ with app.app_context():
     db.create_all()
 
 
+@app.route("/health")
+def health():
+    return {
+        "status": "healthy",
+        "application": "Custom Inquiry Manager",
+        "version": "1.0"
+    }, 200    
+
 if __name__ == "__main__":
     app.run(debug=True)
+
