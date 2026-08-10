@@ -37,7 +37,8 @@ This project demonstrates end-to-end backend development, cloud deployment, AI i
 
 ## 🏗 Architecture
 
-![Architecture](screenshots/architecture.png)
+<img width="1536" height="1024" alt="architecture" src="https://github.com/user-attachments/assets/52ef89b4-8500-425d-ae3e-3f4ab187b81c" />
+
 
 ---
 
